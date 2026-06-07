@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ArtikelComponent } from './artikel/artikel.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  //standalone hinzufügen hier
+  standalone: true,
+  imports: [RouterOutlet, ArtikelComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
