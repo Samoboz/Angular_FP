@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Article } from '../article';
 
 @Component({
@@ -9,11 +9,6 @@ import { Article } from '../article';
   styleUrl: './artikel.component.css'
 })
 export class ArtikelComponent {
- article: Article = new Article(
-    1,
-    'Mein erster Artikel',
-    'Fabian',
-    '2026-06-07',
-    'Dies ist der Inhalt meines ersten Blogartikels.'
-  );
+@Input() article!: Article;
+// Das ! sagt Typescript, der Wert kommt später von außen aus dem Template der Root-Komponente
 }

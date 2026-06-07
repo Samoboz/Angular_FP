@@ -1,28 +1,15 @@
-<header class="bg-dark text-white p-3">
-  <div class="container">
-    <h1>Mein Blog</h1>
-  </div>
-</header>
+<app-kopfbereich></app-kopfbereich>
 
-<div class="container mt-3">
-  <div class="row">
-    <main class="col-md-9">
-      <app-artikel></app-artikel>
+<div class="container my-4">
+  <div class="row g-4">
+    <main class="col-lg-8">
+      <app-artikel *ngFor="let a of articles" [article]="a"></app-artikel>
     </main>
 
-    <aside class="col-md-3">
-      <h3>Sidebar</h3>
-      <ul>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-      </ul>
-    </aside>
+    <div class="col-lg-4">
+      <app-sidebar [articles]="articles"></app-sidebar>
+    </div>
   </div>
 </div>
 
-<footer class="bg-light text-center p-3 mt-4">
-  <div class="container">
-    <p>&copy; 2026 Mein Blog</p>
-  </div>
-</footer>
+<app-fussbereich></app-fussbereich>

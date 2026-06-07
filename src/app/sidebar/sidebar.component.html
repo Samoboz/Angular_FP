@@ -1,0 +1,14 @@
+<aside class="card shadow-sm">
+  <div class="card-body">
+    <h3 class="h5 mb-3">Tagcloud</h3>
+
+    <div class="d-flex flex-wrap gap-2">
+      <span
+        class="badge rounded-pill text-bg-primary"
+        *ngFor="let entry of tagMap | keyvalue"
+      >
+        {{ entry.key }} ({{ entry.value }})
+      </span>
+    </div>
+  </div>
+</aside>
